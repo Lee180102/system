@@ -1,4 +1,4 @@
-package com.sys.system.api;
+package com.sys.system.vo;
 
 /**
  * @author ：lijie
@@ -25,7 +25,7 @@ public class CommonResult<T> {
      * @Name: success
      * @Param: [data 获取的数据]
      * @create: 2020/1/9 14:36
-     * @return: com.sys.system.api.CommonResult<T>
+     * @return: com.sys.system.vo.CommonResult<T>
      */ 
     public static <T> CommonResult<T> success(T data){
         return new CommonResult<T>(ResultCode.SUCCESS.getCode(),ResultCode.SUCCESS.getMessage(),data);
@@ -37,7 +37,7 @@ public class CommonResult<T> {
      * @Name: success
      * @Param: [data 获取的数据, message 提示信息]
      * @create: 2020/1/9 14:38
-     * @return: com.sys.system.api.CommonResult<T>
+     * @return: com.sys.system.vo.CommonResult<T>
      */
     public static <T> CommonResult<T> success(T data,String message){
         return new CommonResult<T>(ResultCode.SUCCESS.getCode(), message, data);
@@ -48,7 +48,7 @@ public class CommonResult<T> {
      * @Name: failed
      * @Param: [errorCode 错误码]
      * @create: 2020/1/9 14:40
-     * @return: com.sys.system.api.CommonResult<T>
+     * @return: com.sys.system.vo.CommonResult<T>
      */
     public static <T> CommonResult<T> failed(IErrorCode errorCode) {
         return new CommonResult<T>(errorCode.getCode(), errorCode.getMessage(), null);
@@ -59,7 +59,7 @@ public class CommonResult<T> {
      * @Name: failed
      * @Param: [message 错误提示信息]
      * @create: 2020/1/9 14:40
-     * @return: com.sys.system.api.CommonResult<T>
+     * @return: com.sys.system.vo.CommonResult<T>
      */
     public static <T> CommonResult<T> failed(String message) {
         return new CommonResult<T>(ResultCode.FAILED.getCode(), message, null);
@@ -70,7 +70,7 @@ public class CommonResult<T> {
      * @Name: failed
      * @Param: []
      * @create: 2020/1/9 14:41
-     * @return: com.sys.system.api.CommonResult<T>
+     * @return: com.sys.system.vo.CommonResult<T>
      */ 
     public static <T> CommonResult<T> failed() {
         return failed(ResultCode.FAILED);
@@ -82,7 +82,7 @@ public class CommonResult<T> {
      * @Name: validateFailed
      * @Param: [] 
      * @create: 2020/1/9 14:43
-     * @return: com.sys.system.api.CommonResult<T>
+     * @return: com.sys.system.vo.CommonResult<T>
      */ 
     public static <T> CommonResult<T> validateFailed() {
         return failed(ResultCode.VALIDATE_FAILED);
@@ -93,7 +93,7 @@ public class CommonResult<T> {
      * @Name: validateFailed
      * @Param: [message 提示信息]
      * @create: 2020/1/9 14:43
-     * @return: com.sys.system.api.CommonResult<T>
+     * @return: com.sys.system.vo.CommonResult<T>
      */
     public static <T> CommonResult<T> validateFailed(String message) {
         return new CommonResult<T>(ResultCode.VALIDATE_FAILED.getCode(), message, null);
@@ -104,7 +104,7 @@ public class CommonResult<T> {
      * @Name: unauthorized
      * @Param: [data 获取数据]
      * @create: 2020/1/9 14:44
-     * @return: com.sys.system.api.CommonResult<T>
+     * @return: com.sys.system.vo.CommonResult<T>
      */
     public static <T> CommonResult<T> unauthorized(T data) {
         return new CommonResult<T>(ResultCode.UNAUTHORIZED.getCode(), ResultCode.UNAUTHORIZED.getMessage(), data);
@@ -115,7 +115,7 @@ public class CommonResult<T> {
      * @Name: forbidden
      * @Param: [data 获取的数据]
      * @create: 2020/1/9 14:45
-     * @return: com.sys.system.api.CommonResult<T>
+     * @return: com.sys.system.vo.CommonResult<T>
      */
     public static <T> CommonResult<T> forbidden(T data) {
         return new CommonResult<T>(ResultCode.FORBIDDEN.getCode(), ResultCode.FORBIDDEN.getMessage(), data);

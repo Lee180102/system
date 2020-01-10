@@ -1,4 +1,4 @@
-package com.sys.system.api;
+package com.sys.system.vo;
 
 public enum ResultCode implements IErrorCode {
     SUCCESS(200,"操作成功"),

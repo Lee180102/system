@@ -1,4 +1,4 @@
-package com.sys.system.api;
+package com.sys.system.vo;
 
 public interface IErrorCode {
 
